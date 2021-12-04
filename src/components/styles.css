@@ -1,0 +1,131 @@
+.input {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.3s;
+  box-shadow: inset 0 0 5px #333;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.input__submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0;
+  border: none;
+  font-size: 15px;
+  background-color: #27c;
+  color: whitesmoke;
+  transition: 0.3s all;
+  box-shadow: 0 0 10px #333;
+  cursor: pointer;
+}
+
+.input__submit:hover {
+  background-color: #00aaff;
+}
+
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px #333;
+}
+
+.todos {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  overflow-y: scroll;
+  margin: 30px 0;
+  padding: 25px 15px;
+  grid-gap: 10px 0px;
+}
+
+.todos::-webkit-scrollbar {
+  width: 10px;
+}
+
+.todos::-webkit-scrollbar-track {
+  background-color: #035e96;
+  border-radius: 10px;
+}
+
+.todos::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #00aaff;
+}
+
+.todos__single {
+  display: flex;
+  width: 95%;
+  height: 90%;
+  border-radius: 5px;
+  padding: 20px;
+  background-image: linear-gradient(
+    250deg,
+    #008f7a,
+    #008e9b,
+    #0089ba,
+    #0081cf,
+    #2c73d2,
+    #845ec2
+  );
+  align-items: baseline;
+}
+
+.todos__single-text {
+  flex: 1;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+.todos__single-text:focus {
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .todos__single {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+  }
+  .todos__single {
+    width: 100%;
+  }
+}
