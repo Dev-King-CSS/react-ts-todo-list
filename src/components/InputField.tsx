@@ -1,4 +1,4 @@
-import React, { useRef, FC, useEffect } from "react"
+import { useRef, FC, useEffect } from "react"
 import { InputFieldProps } from "../interfaces"
 
 const InputField: FC<InputFieldProps> = ({
