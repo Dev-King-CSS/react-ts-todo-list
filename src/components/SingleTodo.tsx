@@ -24,7 +24,12 @@ const SingleTodo: FC<SingleTodoProps> = ({
 
   const handleEdit = (e: FormEvent, id: number) => {
     e.preventDefault()
-
+    const spaceRegex = /^\s*$/i
+    if (spaceRegex.test(editTodo)) {
+      return alert(
+        `You cannot leave the todo empty! Delete it if you don't want it to be present.`
+      )
+    }
     setTodos(
       todos.map(todo =>
         todo.id === id ? { ...todo, todo: editTodo } : todo
